@@ -1,4 +1,5 @@
 import requests
+import os
 
 def check_new_commits(repo_owner, repo_name, last_commit_sha=None):
     url = f"https://api.github.com/repos/{repo_owner}/{repo_name}/commits"
@@ -21,5 +22,6 @@ def check_new_commits(repo_owner, repo_name, last_commit_sha=None):
 
 repo_owner = "prernassp"
 repo_name = "CICD_Project"
+os.system("echo started >> log.txt")
 last_commit_sha = None
 check_new_commits(repo_owner, repo_name, last_commit_sha)
