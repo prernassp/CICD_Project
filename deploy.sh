@@ -11,7 +11,7 @@ if [ -d "$DEST_DIR/.git" ]; then
 else
   git clone "$REPO_URL" "$DEST_DIR"
 fi
-
+sudo mv /home/ubuntu/CICD_Project/project.html /var/www/html/index.html
 # Restart Nginx
 echo "Restarting Nginx..."
 sudo systemctl restart nginx
